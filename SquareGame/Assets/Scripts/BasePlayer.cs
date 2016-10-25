@@ -3,9 +3,13 @@ using System.Collections;
 
 public abstract class BasePlayer : GameManager {
 
+    public float delay;
+
     public GameObject[] playerParty;
 
     public bool isGrounded;
+    public GameObject mainPlayer;
+    public bool inRange;
 
     public Animator anim;
 
@@ -27,13 +31,17 @@ public abstract class BasePlayer : GameManager {
     }
 
     public override void Awake() {
+        mainPlayer = GameObject.FindGameObjectWithTag("Player").gameObject;
         GameManager gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         anim = this.gameObject.GetComponent<Animator>();
         setColor(gm.pColor);
     }
 
     public virtual void Update(){
-        baseMove();
+        Physics2D.IgnoreLayerCollision (8, 9, rb.velocity.y > 0);
+        Physics2D.IgnoreLayerCollision(8,8);
+        Invoke("baseMove", delay);
+
     }
 
     protected void baseMove()
@@ -55,7 +63,5 @@ public abstract class BasePlayer : GameManager {
         gameObject.GetComponent<Renderer>().material.color = col;
     }
 
-    void hurt() {
-    }
 
 }

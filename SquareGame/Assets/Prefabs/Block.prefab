@@ -12,7 +12,7 @@ GameObject:
   - 23: {fileID: 2350430}
   - 114: {fileID: 11487464}
   - 61: {fileID: 6106760}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Block
   m_TagString: NormalBlock
   m_Icon: {fileID: 0}
