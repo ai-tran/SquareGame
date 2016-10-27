@@ -9,7 +9,7 @@ public abstract class BasePlayer : GameManager {
 
     public bool isGrounded;
     public GameObject mainPlayer;
-    public bool inRange;
+    public GameObject partyMember;
 
     public Animator anim;
 
@@ -32,7 +32,11 @@ public abstract class BasePlayer : GameManager {
 
     public override void Awake() {
         mainPlayer = GameObject.FindGameObjectWithTag("Player").gameObject;
+        //partyMember = GameObject.FindGameObjectWithTag("PartyMember").gameObject;
+
+
         GameManager gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+
         anim = this.gameObject.GetComponent<Animator>();
         setColor(gm.pColor);
     }
@@ -40,8 +44,7 @@ public abstract class BasePlayer : GameManager {
     public virtual void Update(){
         Physics2D.IgnoreLayerCollision (8, 9, rb.velocity.y > 0);
         Physics2D.IgnoreLayerCollision(8,8);
-        Invoke("baseMove", delay);
-
+        baseMove();
     }
 
     protected void baseMove()
@@ -52,16 +55,17 @@ public abstract class BasePlayer : GameManager {
         rb.velocity = new Vector2(x, rb.velocity.y);
 
         if(Input.GetKeyDown(KeyCode.Space)) {
-            rb.AddForce(new Vector2(0, jumpSpeed), ForceMode2D.Impulse);
-            anim.SetTrigger("RedWalk");
+            Jump();
         }
-
     }
 
-    public void setColor(Color col)
-    {
+    public void setColor(Color col){
         gameObject.GetComponent<Renderer>().material.color = col;
     }
 
+    protected void Jump() {
+        rb.AddForce(new Vector2(0, jumpSpeed), ForceMode2D.Impulse);
+        anim.SetTrigger("RedWalk");
+    }
 
 }

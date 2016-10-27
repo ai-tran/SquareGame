@@ -9,6 +9,7 @@ TagManager:
   - Dust
   - Enemy
   - PartyMember
+  - JumpBox
   layers:
   - Default
   - TransparentFX

@@ -45,7 +45,7 @@ MonoBehaviour:
   - {fileID: 139830, guid: 046c7339b8bc7504e8c84d5eede9a0b6, type: 2}
   - {fileID: 139830, guid: baa662a3b3c449a49991ff773e50404e, type: 2}
   colList:
-  - {r: 0.6641988, g: 0.43382353, b: 1, a: 1}
+  - {r: 0.5385394, g: 0.52205884, b: 1, a: 1}
   - {r: 0, g: 0, b: 1, a: 1}
   - {r: 0, g: 1, b: 0, a: 1}
   classIndex: 2
