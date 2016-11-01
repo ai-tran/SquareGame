@@ -3,15 +3,13 @@ using System.Collections;
 
 public class BasePlatform : GameManager {
 
-    public Color test;
     public GameManager gm;
 
     public override void Awake() {
-        GameManager gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
-        test = gm.pColor;
+        gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
     }
 
-    void OnCollisionEnter2D(Collision2D coll) {
+    void OnTriggerEnter2D(Collider2D coll) {
         if (coll.gameObject.tag == "Player")
         {
             if (this.gameObject.GetComponent<Renderer>().material.color == Color.white) {
@@ -22,12 +20,9 @@ public class BasePlatform : GameManager {
         }
     }
 
-    void OnCollisionExit2D(Collision2D coll) {
-        if (coll.gameObject.tag == "Player")
-        {
-
+    void OnTriggerExit2D(Collider2D coll) {
+        if (coll.gameObject.tag == "Player") { 
             StartCoroutine("LerpColorOff", Color.white);
-
         }
     }
 
@@ -37,7 +32,7 @@ public class BasePlatform : GameManager {
         while (ElapsedTime < TotalTime)
         {
             ElapsedTime += Time.deltaTime;
-            this.gameObject.GetComponent<Renderer>().material.color = Color.Lerp(fart, test, (ElapsedTime / TotalTime));
+            this.gameObject.GetComponent<Renderer>().material.color = Color.Lerp(fart, gm.playerColor, (ElapsedTime / TotalTime));
             yield return null;
         }
     }

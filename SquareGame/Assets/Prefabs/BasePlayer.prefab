@@ -131,20 +131,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 605f1ee8be1e446428db840a59856ead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerClass: []
-  colList:
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0, g: 0, b: 1, a: 1}
-  - {r: 0, g: 1, b: 0, a: 1}
-  classIndex: 0
-  delay: 0
-  playerParty: []
+  isPlayer: 0
   isGrounded: 0
+  temp: {r: 0, g: 0, b: 0, a: 0}
   mainPlayer: {fileID: 0}
   partyMember: {fileID: 0}
+  playerInstances: []
+  playerColorIndex: 0
   anim: {fileID: 0}
   playerSpeed: 2
   jumpSpeed: 150
+  gm: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -408,7 +405,7 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0, g: 0, b: 0, a: 0}
+      maxColor: {r: 0.41960785, g: 0.5176471, b: 1, a: 1}
       minMaxState: 0
     startSize:
       scalar: 3

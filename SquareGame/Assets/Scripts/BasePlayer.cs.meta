@@ -1,10 +1,15 @@
 fileFormatVersion: 2
 guid: b3c9eec27b7470344ba35fd528003775
-timeCreated: 1476161039
+timeCreated: 1477961508
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - NPCImage: {instanceID: 0}
+  - mainPlayer: {instanceID: 0}
+  - partyMember: {instanceID: 0}
+  - anim: {instanceID: 0}
+  - gm: {fileID: 11440948, guid: 7d0083dbbfd998e41928822cbdbfaee0, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
