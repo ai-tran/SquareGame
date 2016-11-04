@@ -10,6 +10,7 @@ public abstract class BasePlayer : MonoBehaviour {
     public GameObject mainPlayer;
     public GameObject partyMember;
     public Color[] playerInstances;
+    public bool canMove = true;
 
     public int playerColorIndex;
 

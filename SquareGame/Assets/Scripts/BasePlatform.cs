@@ -1,19 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BasePlatform : GameManager {
+public class BasePlatform : MonoBehaviour {
 
     public GameManager gm;
 
-    public override void Awake() {
+    public GameObject bulletSpawn;
+
+    Color matCol;
+
+    void Awake() {
+        matCol = this.gameObject.GetComponent<Renderer>().material.color;
         gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
     }
 
     void OnTriggerEnter2D(Collider2D coll) {
         if (coll.gameObject.tag == "Player")
         {
-            if (this.gameObject.GetComponent<Renderer>().material.color == Color.white) {
-                StartCoroutine("LerpColorOn", Color.white);
+            if (this.gameObject.GetComponent<Renderer>().material.color == matCol) {
+                StartCoroutine("LerpColorOn", matCol);
             } else {
                 StartCoroutine("LerpColorOn", this.gameObject.GetComponent<Renderer>().material.color);
             }
@@ -22,7 +27,7 @@ public class BasePlatform : GameManager {
 
     void OnTriggerExit2D(Collider2D coll) {
         if (coll.gameObject.tag == "Player") { 
-            StartCoroutine("LerpColorOff", Color.white);
+            StartCoroutine("LerpColorOff", matCol);
         }
     }
 
@@ -46,6 +51,11 @@ public class BasePlatform : GameManager {
             this.gameObject.GetComponent<Renderer>().material.color = Color.Lerp(gameObject.GetComponent<Renderer>().material.color, farts, (ElapsedTime / TotalTime));
             yield return null;
         }
+    }
+
+    void Shoot() {
+        Vector2 mousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        
     }
 
 }

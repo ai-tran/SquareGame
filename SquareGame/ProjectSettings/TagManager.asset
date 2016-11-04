@@ -11,6 +11,7 @@ TagManager:
   - PartyMember
   - JumpBox
   - poison
+  - NPC
   layers:
   - Default
   - TransparentFX

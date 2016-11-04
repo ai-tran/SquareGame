@@ -14,6 +14,7 @@ GameObject:
   - 50: {fileID: 5012200}
   - 61: {fileID: 6169242}
   - 95: {fileID: 9539070}
+  - 114: {fileID: 114000010301874248}
   m_Layer: 8
   m_Name: BasePlayer
   m_TagString: Player
@@ -137,6 +138,7 @@ MonoBehaviour:
   mainPlayer: {fileID: 0}
   partyMember: {fileID: 0}
   playerInstances: []
+  canMove: 1
   playerColorIndex: 0
   anim: {fileID: 0}
   playerSpeed: 2
@@ -212,6 +214,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 490780}
   m_RootOrder: 0
+--- !u!114 &114000010301874248
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69d738cd439b52b459e0f579a2bc60fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubble: {fileID: 1000012102755994, guid: 7354639adb9a25d4e8e20fd11e5995dd,
+    type: 2}
+  uIElements: {fileID: 0}
+  NpcImageAnim: {fileID: 0}
+  NpcTextboxAnim: {fileID: 0}
+  player: {fileID: 0}
+  NPCName: {fileID: 0}
 --- !u!198 &198000011216185374
 ParticleSystem:
   m_ObjectHideFlags: 1
