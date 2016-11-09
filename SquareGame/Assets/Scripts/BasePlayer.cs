@@ -12,6 +12,10 @@ public abstract class BasePlayer : MonoBehaviour {
     public Color[] playerInstances;
     public bool canMove = true;
 
+    public ParticleSystem poison;
+
+    public GameObject bullet;
+
     public int playerColorIndex;
 
     public Animator anim;
@@ -39,9 +43,11 @@ public abstract class BasePlayer : MonoBehaviour {
 
         if (isPlayer) {
             baseMove();
+            PlayerSkill(playerColorIndex);
         } else {
             followPlayer();
         }
+
     }
 
     /// <summary>
@@ -91,8 +97,38 @@ public abstract class BasePlayer : MonoBehaviour {
         partyMember.gameObject.GetComponent<Renderer>().material.color = mainPlayer.gameObject.GetComponent<Renderer>().material.color;
         mainPlayer.gameObject.GetComponent<Renderer>().material.color = temp;
         gm.playerColor = temp;
+        playerColorIndex++;
+        if(playerColorIndex >= 2) {
+            playerColorIndex = 0;
+        }
     }
 
+    void PlayerSkill(int playerSkillIndex) {
+        switch (playerColorIndex) {
+            case 0: ShootSkill();
+                break;
+            case 1: Poison();
+                break;
+        }
+    }
+
+
+    void ShootSkill() {
+        if (Input.GetMouseButtonDown(0)) {
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 myPos = new Vector2(this.transform.position.x, this.transform.position.y);
+            Vector2 direction = mousePos - myPos;
+            direction.Normalize();
+            GameObject projectile = (GameObject)Instantiate(bullet, myPos, Quaternion.identity);
+            projectile.GetComponent<Rigidbody2D>().velocity = direction * 30;
+        }
+    }
+
+    void Poison() {
+        if (Input.GetMouseButtonDown(0)) {
+            poison.Play();
+        }
+    }
 
 
 }

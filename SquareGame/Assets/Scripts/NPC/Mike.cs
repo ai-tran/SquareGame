@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Frank : MonoBehaviour {
+public class Mike : MonoBehaviour {
 
     public GameObject Player;
 
@@ -19,14 +19,14 @@ public class Frank : MonoBehaviour {
     bool inRange;
     bool hasTalkedTo;
 
-    Color npcColor = new Color32(255, 86, 153, 255);
+    Color npcColor = new Color32(94, 191, 103, 255);
 
     void Update() {
         if (Input.GetKeyDown("q")) {
-            npcNameText.text = "Frank";
-            npcImage.GetComponent<SpriteRenderer>().color = npcColor;
-            speechBubble.gameObject.SetActive(false);
             if (inRange) {
+                npcNameText.text = "Mike";
+                npcImage.GetComponent<SpriteRenderer>().color = npcColor;
+                speechBubble.gameObject.SetActive(false);
                 if (uiIsOn == false) {
                     turnOnUI();
                     uiIsOn = true;
@@ -54,7 +54,6 @@ public class Frank : MonoBehaviour {
     void turnOnUI() {
         UIElement.gameObject.SetActive(true);
         Talk();
-        Debug.Log("Frank is talking");
     }
 
     void Talk() {
@@ -69,12 +68,11 @@ public class Frank : MonoBehaviour {
 
     IEnumerator printText(string text) {
         npcSpeechtext.text = "";
+        yield return new WaitForSeconds(0.5f);
         for (int i = 0; i < text.Length;) {
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.03f);
             npcSpeechtext.text += text[i++];
         }
     }
 
 }
-
-

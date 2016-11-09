@@ -13,7 +13,7 @@ public class BaseClassEffects : StateMachineBehaviour {
 
 	 //OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        dust.gameObject.GetComponent<ParticleSystem>().startColor = gm.playerColor;
+        //dust.gameObject.GetComponent<ParticleSystem>().startColor = gm.playerColor;
         //dust.GetComponent<ParticleSystem>().Play();
     }
 

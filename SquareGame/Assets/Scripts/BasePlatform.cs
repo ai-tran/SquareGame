@@ -5,8 +5,6 @@ public class BasePlatform : MonoBehaviour {
 
     public GameManager gm;
 
-    public GameObject bulletSpawn;
-
     Color matCol;
 
     void Awake() {
@@ -51,11 +49,6 @@ public class BasePlatform : MonoBehaviour {
             this.gameObject.GetComponent<Renderer>().material.color = Color.Lerp(gameObject.GetComponent<Renderer>().material.color, farts, (ElapsedTime / TotalTime));
             yield return null;
         }
-    }
-
-    void Shoot() {
-        Vector2 mousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-        
     }
 
 }
