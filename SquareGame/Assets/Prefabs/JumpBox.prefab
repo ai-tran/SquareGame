@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000014034255992}
-  - 68: {fileID: 68000010124055060}
+  - 61: {fileID: 61000011890606810}
   m_Layer: 0
   m_Name: JumpBox
   m_TagString: JumpBox
@@ -40,8 +40,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!68 &68000010124055060
-EdgeCollider2D:
+--- !u!61 &61000011890606810
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -52,6 +52,5 @@ EdgeCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
-  m_Points:
-  - {x: -0.5, y: 0}
-  - {x: -0.17588449, y: -0.008824706}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}

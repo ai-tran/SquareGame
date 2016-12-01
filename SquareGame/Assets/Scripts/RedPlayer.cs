@@ -8,6 +8,7 @@ public class RedPlayer : BasePlayer {
         setColor(gm.colorList[0]);
         playerSpeed = 10;
         isPlayer = true;
+        maxHealth = 10;
     }
 
     public override void Update() {

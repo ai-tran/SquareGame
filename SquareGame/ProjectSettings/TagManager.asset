@@ -12,6 +12,7 @@ TagManager:
   - JumpBox
   - poison
   - NPC
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -24,8 +25,8 @@ TagManager:
   - playerlayer
   - partymemberlayer
   - platformlayer
-  - 
-  - 
+  - Bullet
+  - Enemy
   - 
   - 
   - 

@@ -1,15 +1,20 @@
 fileFormatVersion: 2
 guid: b3c9eec27b7470344ba35fd528003775
-timeCreated: 1477961508
+timeCreated: 1480541822
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
-  - NPCImage: {instanceID: 0}
   - mainPlayer: {instanceID: 0}
   - partyMember: {instanceID: 0}
-  - anim: {instanceID: 0}
   - gm: {fileID: 11440948, guid: 7d0083dbbfd998e41928822cbdbfaee0, type: 2}
+  - bullet: {instanceID: 0}
+  - anim: {instanceID: 0}
+  - audioSource: {instanceID: 0}
+  - poison: {instanceID: 0}
+  - hitSfx: {fileID: 8300000, guid: b407b11420329cc4dbb66f8c7efd7682, type: 3}
+  - jumpSfx: {fileID: 8300000, guid: e614643c9f87a3248bee2763656c603c, type: 3}
+  - shootSfx: {fileID: 8300000, guid: 0dc3d3c5bde8d9f4283a049f175e3a72, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

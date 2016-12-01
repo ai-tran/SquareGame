@@ -15,6 +15,7 @@ public class BaseClassEffects : StateMachineBehaviour {
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         //dust.gameObject.GetComponent<ParticleSystem>().startColor = gm.playerColor;
         //dust.GetComponent<ParticleSystem>().Play();
+        
     }
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

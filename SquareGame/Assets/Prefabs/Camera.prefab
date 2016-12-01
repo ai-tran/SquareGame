@@ -13,8 +13,8 @@ GameObject:
   - 92: {fileID: 9298946}
   - 81: {fileID: 8117620}
   - 114: {fileID: 11469582}
-  - 114: {fileID: 114000012966495172}
   - 114: {fileID: 114000010066040970}
+  - 114: {fileID: 114000011362450294}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -29,7 +29,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169410}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.5, y: -6, z: -96}
+  m_LocalPosition: {x: 0, y: 0, z: -14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -153,6 +153,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000012220674496
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000011127943260}
+  - 212: {fileID: 212000013547934528}
+  m_Layer: 0
+  m_Name: CubeNpcImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000012549344008
 GameObject:
   m_ObjectHideFlags: 1
@@ -214,7 +230,7 @@ GameObject:
   - 4: {fileID: 4000012758724172}
   - 212: {fileID: 212000010657751288}
   m_Layer: 0
-  m_Name: CubeNpcImage
+  m_Name: CubeNpcImageJeff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -276,6 +292,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000010337896828}
   m_RootOrder: 0
+--- !u!4 &4000011127943260
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012220674496}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.05, y: -0.02, z: -3.02}
+  m_LocalScale: {x: 0.9639118, y: 0.96391195, z: 0.96391195}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000012847966530}
+  m_RootOrder: 0
 --- !u!4 &4000011624417982
 Transform:
   m_ObjectHideFlags: 1
@@ -296,12 +325,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013530646382}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05, y: -0.02, z: -3.02}
-  m_LocalScale: {x: 0.9639118, y: 0.96391195, z: 0.96391195}
+  m_LocalPosition: {x: 0.050000038, y: -0.019999424, z: -3.0199983}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000012847966530}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &4000012847966530
 Transform:
   m_ObjectHideFlags: 1
@@ -313,6 +342,7 @@ Transform:
   m_LocalScale: {x: 0.8053058, y: 0.80530584, z: 0.80530584}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 4000011127943260}
   - {fileID: 4000012758724172}
   m_Father: {fileID: 4000013192232638}
   m_RootOrder: 0
@@ -472,7 +502,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169410}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a338d679868f45439ea43c7ae035e36, type: 3}
   m_Name: 
@@ -491,11 +521,11 @@ MonoBehaviour:
     nearFalloff: 15
     farPlane: 37.5
     farFalloff: 50
-    nearBlurRadius: 15
-    farBlurRadius: 20
+    nearBlurRadius: 0
+    farBlurRadius: 11.3
   bokehTexture:
     texture: {fileID: 0}
-    scale: 1
+    scale: 4.3
     intensity: 50
     threshold: 2
     spawnHeuristic: 0.15
@@ -505,28 +535,25 @@ MonoBehaviour:
     type: 3}
   m_TextureBokehShader: {fileID: 4800000, guid: c961b8ed1f00f924d804ada5143bd0e8,
     type: 3}
---- !u!114 &114000012966495172
+--- !u!114 &114000011362450294
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169410}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e89654dcf6db746d2a57aeaaa14f5e83, type: 3}
+  m_Script: {fileID: 11500000, guid: 32187365ced0c42219cde2b57c99b323, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   settings:
-    intensity: 1.6
-    radius: 0.3
-    sampleCount: 2
-    sampleCountValue: 24
-    downsampling: 0
-    ambientOnly: 0
-    occlusionSource: 1
-    debug: 0
-  _aoShader: {fileID: 4800000, guid: 65e203e5acda447acbf9dc1ef78c4a39, type: 3}
-  _quadMesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+    threshold: 0.9
+    softKnee: 1
+    radius: 2
+    intensity: 0.7
+    highQuality: 1
+    antiFlicker: 0
+  m_Shader: {fileID: 4800000, guid: e45d4f28262b04d10a075856ab5fdb5e, type: 3}
 --- !u!212 &212000010657751288
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -556,7 +583,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d58b8a518da11a546b6bbd57c9fc41ae, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a1c47d636583f4547982af13b84f1bd1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -657,5 +684,38 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 43bc1d2e03fd524468808d8da537cd79, type: 3}
   m_Color: {r: 0.22413792, g: 0.22413792, b: 0.22413792, a: 0.597}
+  m_FlipX: 0
+  m_FlipY: 0
+--- !u!212 &212000013547934528
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012220674496}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: d58b8a518da11a546b6bbd57c9fc41ae, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

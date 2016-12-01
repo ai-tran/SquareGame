@@ -79,13 +79,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17e5ad4f8afff464f8210e3c29c89541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerClass: []
-  colList:
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0, g: 0, b: 1, a: 1}
-  - {r: 0, g: 1, b: 0, a: 1}
-  classIndex: 0
-  test: {r: 0.5385394, g: 0.52205884, b: 1, a: 1}
   gm: {fileID: 11440948, guid: 7d0083dbbfd998e41928822cbdbfaee0, type: 2}
 --- !u!1001 &100100000
 Prefab:

@@ -47,8 +47,8 @@ MonoBehaviour:
   - {fileID: 139830, guid: 046c7339b8bc7504e8c84d5eede9a0b6, type: 2}
   - {fileID: 139830, guid: baa662a3b3c449a49991ff773e50404e, type: 2}
   colorList:
-  - {r: 0.41911763, g: 0.51926976, b: 1, a: 1}
-  - {r: 0.35899654, g: 1, b: 0.16176474, a: 1}
+  - {r: 1, g: 0.6791739, b: 0.051470578, a: 1}
+  - {r: 0.5609862, g: 0.4852941, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

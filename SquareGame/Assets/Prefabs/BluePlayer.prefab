@@ -183,7 +183,7 @@ Animator:
   m_GameObject: {fileID: 139830}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: dd2c62a72fbb28b46b370608764f2163, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -204,15 +204,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isGrounded: 0
+  isInvincible: 0
+  canJump: 1
+  canMove: 1
   temp: {r: 0, g: 0, b: 0, a: 0}
   mainPlayer: {fileID: 0}
   partyMember: {fileID: 0}
-  playerInstances: []
-  canMove: 1
+  jumpSpeed: 150
+  maxHealth: 0
+  health: 0
+  duration: 1
+  magnitude: 1
+  poison: {fileID: 0}
+  bullet: {fileID: 0}
+  spawnJumpBox: {fileID: 1000012467309860, guid: 22378f94599bc4f4090b8048ac5516dd,
+    type: 2}
   playerColorIndex: 0
   anim: {fileID: 0}
   playerSpeed: 2
-  jumpSpeed: 150
   gm: {fileID: 0}
 --- !u!198 &198000010916315454
 ParticleSystem:
